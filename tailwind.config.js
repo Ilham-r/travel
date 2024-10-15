@@ -8,8 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        mintgreen: "#8DD3BB",
+        salmon: "#FF8682",
+      },
+      fontSize: {
+        fontFamily: {
+          roboto: ["var(--font-gothic)", "sans"],
+        },
       },
     },
   },
