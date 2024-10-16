@@ -10,10 +10,11 @@ module.exports = {
       colors: {
         mintgreen: "#8DD3BB",
         salmon: "#FF8682",
+        blackgreen: "#112211",
       },
       fontSize: {
         fontFamily: {
-          roboto: ["var(--font-gothic)", "sans"],
+          gothic: ["var(--font-gothic)", "sans"],
         },
       },
     },
