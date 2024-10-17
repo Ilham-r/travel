@@ -13,9 +13,12 @@ module.exports = {
         blackgreen: "#112211",
       },
       fontSize: {
-        fontFamily: {
-          gothic: ["var(--font-gothic)", "sans"],
-        },
+        h1: ["45px"],
+        h2: ["40px"],
+      },
+
+      fontFamily: {
+        gothic: ["var(--font-gothic)", "sans"],
       },
     },
   },
