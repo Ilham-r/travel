@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./sections/Hero";
 import Recent from "./sections/Recentview";
 import Destinations from "./sections/Destinations";
+import Hotels from "./sections/Hotels";
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Hero />
       <Recent />
       <Destinations />
+      <Hotels />
     </>
   );
 };

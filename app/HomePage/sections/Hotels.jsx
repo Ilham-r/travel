@@ -1,7 +1,7 @@
 import Card from "@/components/Card";
 import React from "react";
 
-const Destinations = () => {
+const Hotels = () => {
   return (
     <div className="flex flex-col px-20 gap-3 py-6 max-md:px-10 ">
       <div className="flex w-full justify-between items-center">
@@ -28,4 +28,4 @@ const Destinations = () => {
   );
 };
 
-export default Destinations;
+export default Hotels;
