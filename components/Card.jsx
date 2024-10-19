@@ -5,7 +5,7 @@ const Card = () => {
   return (
     <div className="  group relative block w-60 h-80 overflow-hidden rounded-2xl max-md:w-full max-md:h-96">
       <img
-        src="/images/paris.jpg"
+        src="./images/paris.jpg"
         alt="paris"
         className="w-full h-full object-cover duration-500 ease-in-out group-hover:scale-125"
       />
