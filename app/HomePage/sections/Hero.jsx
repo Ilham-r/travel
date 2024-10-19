@@ -35,7 +35,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="flex mt-4 flex-col relative  px-20 h-[80vh] bg-cover bg-center w-full bg-[url('./images/home.jpg')]">
+    <div className="flex mt-4 flex-col relative  px-20 h-[80vh] bg-cover bg-center w-full bg-[url('/images/home.jpg')]">
       <div className="  flex gap-1 flex-col w-1/2 text-white py-8">
         <p className="text-h1 font-bold ">
           Make your travel whishlist, we’ll do the rest
