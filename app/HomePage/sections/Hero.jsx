@@ -47,7 +47,7 @@ const Hero = () => {
         <form
           action="/"
           method="post"
-          className="flex gap-5 justify-center items-centerflex-wrap"
+          className="flex gap-5 justify-center items-center flex-wrap"
         >
           <div class="relative cursor-pointer ">
             <p className="absolute text-gray-500 bg-white bottom-10 left-5">
