@@ -3,7 +3,7 @@ import React from "react";
 
 const Hotels = () => {
   return (
-    <div className="flex flex-col mb-72 px-20 gap-3 py-6 max-md:px-10 ">
+    <div className="flex flex-col mb-60 px-20 gap-3 py-20 max-md:px-10 ">
       <div className="flex w-full justify-between items-center">
         <div className=" flex flex-col pr-20 justify-start items-start">
           <p className="text-h2 ">Fall into travel</p>

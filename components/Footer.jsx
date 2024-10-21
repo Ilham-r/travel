@@ -74,7 +74,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faYoutube} width={33} height={33} />
           </div>
         </div>
-        <div className="flex w-full justify-between items-start self-end">
+        <div className="flex w-full justify-between items-start self-end max-lg:flex-wrap max-lg:gap-3">
           {Object.keys(infos).map((key) => (
             <div key={key}>
               <p className="text-lg font-semibold">{infos[key].title}</p>

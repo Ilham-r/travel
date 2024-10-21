@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <header className="flex w-full pt-2 px-20 justify-between items-center">
+    <header className="flex w-full py-2 px-20 justify-between items-center shadow-lg">
       <div className="log">
         <img src="./images/Logo.png" alt="logo" />
       </div>
