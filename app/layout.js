@@ -4,13 +4,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const geistSans = localFont({
-  src: "./fonts/Trade-Gothic-LT.ttf",
-  variable: "--font-gothic",
+  src: "./fonts/RobotoCondensed-VariableFont_wght.ttf",
+  variable: "--font-roboto",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  src: "./fonts/Montserrat-VariableFont_wght.ttf",
+  variable: "--font-montserrat",
   weight: "100 900",
 });
 

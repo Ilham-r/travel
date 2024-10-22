@@ -18,7 +18,8 @@ module.exports = {
       },
 
       fontFamily: {
-        gothic: ["var(--font-gothic)", "sans"],
+        roboto: ["var(--font-roboto)", "sans"],
+        montserrat: ["var(--font-montserrat)", "sans"],
       },
     },
   },
