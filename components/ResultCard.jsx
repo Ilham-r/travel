@@ -18,7 +18,7 @@ const ResultCard = () => {
   };
 
   return (
-    <div className="flex  w-full h-[300px] shadow-md  items-center text-blackgreen rounded-2xl overflow-hidden ease-in-out duration-300 hover:scale-95 ">
+    <div className="flex  w-full h-[300px] shadow-md  items-center text-blackgreen rounded-2xl overflow-hidden ease-in-out duration-300 hover:scale-95 cursor-pointer ">
       <div className="h-full w-60 ">
         <img
           src="./images/paris.jpg"
