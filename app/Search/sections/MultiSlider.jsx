@@ -9,7 +9,7 @@ const valuetext = (value) => {
 const minDistance = 1;
 
 const MultiSlider = ({ priceRange, setPriceRange }) => {
-  const handleChange1 = (event, newValue, activeThumb) => {
+  const handleChange1 = (newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
       return;
     }
