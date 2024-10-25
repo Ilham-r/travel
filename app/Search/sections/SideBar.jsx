@@ -11,6 +11,15 @@ const SideBar = () => {
     freebies: true,
     amenities: true,
   });
+  const [freebies, setFreebies] = useState([]);
+  const freebieChecked = (newbie) => {
+    if (freebies.includes(newbie)) {
+      setFreebies((prevbies) => prevbies.filter((bie) => bie !== newbie));
+    } else {
+      setFreebies((prev) => [...prev, newbie]);
+    }
+  };
+  console.log("freebird", freebies);
 
   const toggleSection = (section) => {
     setOpenSection((prevState) => ({
@@ -26,14 +35,11 @@ const SideBar = () => {
       [id]: !prev[id],
     }));
   };
-
   const [showAll, setShowAll] = useState(false);
   const handleToggleAmenities = () => {
     setShowAll((prev) => !prev);
   };
-
   const visibleAmenities = showAll ? amenitiesList : amenitiesList.slice(0, 4);
-  console.log(priceRange);
 
   return (
     <div className="flex flex-col gap-4">
@@ -82,8 +88,9 @@ const SideBar = () => {
                   className="peer hidden"
                 />
                 <label
-                  className="p-3 inline-block border-2 border-transparent peer-checked:bg-mintgreen peer-checked:text-white peer-checked:border-white"
+                  className="p-3 inline-block border-2 border-transparent cursor-pointer peer-checked:bg-mintgreen peer-checked:text-white peer-checked:border-white"
                   htmlFor={`check_${i}`}
+                  onClick={() => freebieChecked(i)}
                 >
                   {i}+
                 </label>
