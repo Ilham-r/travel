@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import MultiSlider from "./MultiSlider";
 import { freebiesList, amenitiesList } from "@/public/images/utilities/data";
+
 const SideBar = () => {
   const [priceRange, setPriceRange] = useState([50, 1200]);
   const [openSection, setOpenSection] = useState({
@@ -11,15 +12,7 @@ const SideBar = () => {
     freebies: true,
     amenities: true,
   });
-  const [freebies, setFreebies] = useState([]);
-  const freebieChecked = (newbie) => {
-    if (freebies.includes(newbie)) {
-      setFreebies((prevbies) => prevbies.filter((bie) => bie !== newbie));
-    } else {
-      setFreebies((prev) => [...prev, newbie]);
-    }
-  };
-  console.log("freebird", freebies);
+  const [ratin, setRatin] = useState([]);
 
   const toggleSection = (section) => {
     setOpenSection((prevState) => ({
@@ -28,13 +21,38 @@ const SideBar = () => {
     }));
   };
 
-  const [selectedFreebies, setSelectedFreebies] = useState({});
-  const handleChange = (id) => {
-    setSelectedFreebies((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+  const [selectedFreebies, setSelectedFreebies] = useState([]);
+  const [selectedAmenities, setSelectedAmenities] = useState([]);
+  const handleSelected = (newitem, section) => {
+    if (section == "rating") {
+      if (ratin.includes(newitem)) {
+        setRatin((prevrates) => prevrates.filter((rate) => rate !== newitem));
+      } else {
+        setRatin((prev) => [...prev, newitem]);
+      }
+    } else {
+      if (section == "freebies") {
+        if (selectedFreebies.includes(newitem)) {
+          setSelectedFreebies((previtems) =>
+            previtems.filter((item) => item !== newitem)
+          );
+        } else {
+          setSelectedFreebies((prev) => [...prev, newitem]);
+        }
+      } else {
+        if (selectedAmenities.includes(newitem)) {
+          setSelectedAmenities((previtems) =>
+            previtems.filter((item) => item !== newitem)
+          );
+        } else {
+          setSelectedAmenities((prev) => [...prev, newitem]);
+        }
+      }
+    }
   };
+  console.log("freebies", selectedFreebies);
+  console.log("Amenties", selectedAmenities);
+  console.log("rating", ratin);
   const [showAll, setShowAll] = useState(false);
   const handleToggleAmenities = () => {
     setShowAll((prev) => !prev);
@@ -90,7 +108,7 @@ const SideBar = () => {
                 <label
                   className="p-3 inline-block border-2 border-transparent cursor-pointer peer-checked:bg-mintgreen peer-checked:text-white peer-checked:border-white"
                   htmlFor={`check_${i}`}
-                  onClick={() => freebieChecked(i)}
+                  onClick={() => handleSelected(i, "rating")}
                 >
                   {i}+
                 </label>
@@ -112,15 +130,14 @@ const SideBar = () => {
         </div>
         {openSection["freebies"] && (
           <div className="flex flex-col gap-2">
-            {freebiesList.map((freebie) => (
-              <label key={freebie.id} className="flex items-center">
+            {freebiesList.map((freebie, index) => (
+              <label key={index} className="flex items-center">
                 <input
                   type="checkbox"
-                  checked={!!selectedFreebies[freebie.id]}
-                  onChange={() => handleChange(freebie.id)}
                   className="w-5 h-5 mr-2"
+                  onClick={() => handleSelected(freebie, "freebies")}
                 />
-                {freebie.name}
+                {freebie}
               </label>
             ))}
           </div>
@@ -141,7 +158,11 @@ const SideBar = () => {
           <div className="flex flex-col items-start gap-2">
             {visibleAmenities.map((amenity, index) => (
               <label key={index} className="flex items-center text-base">
-                <input type="checkbox" className="w-5 h-5 mr-2" />
+                <input
+                  type="checkbox"
+                  className="w-5 h-5 mr-2"
+                  onClick={() => handleSelected(amenity, "amenities")}
+                />
                 {amenity}
               </label>
             ))}

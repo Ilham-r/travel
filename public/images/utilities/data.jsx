@@ -1,9 +1,9 @@
 export const freebiesList = [
-  { id: "breakfast", name: "Free breakfast" },
-  { id: "parking", name: "Free parking" },
-  { id: "internet", name: "Free internet" },
-  { id: "airportsh", name: "Free airport shuttle" },
-  { id: "cancellation", name: "Free cancellation" },
+  "Free breakfast",
+  "Free parking",
+  "Free internet",
+  "Free airport shuttle",
+  "Free cancellation",
 ];
 
 export const amenitiesList = [
