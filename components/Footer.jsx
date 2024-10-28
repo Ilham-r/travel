@@ -38,7 +38,7 @@ const infos = {
 
 const Footer = () => {
   return (
-    <footer className="w-full relative h-96 flex-col content-end justify-center items-center bg-mintgreen text-blackgreen p-20">
+    <footer className="flex w-full relative h-96 flex-col content-end justify-center items-center bg-mintgreen text-blackgreen p-20 ">
       <div className="flex  gap-6 absolute bottom-64 w-[87%] bg-[#CDEAE1] rounded-3xl  shadow-xl self-center  items-center justify-between p-7 h-fit max-lg:bottom-80">
         <div className="flex flex-col justify-center gap-2">
           <p className="text-h2 font-bold pr-60">Subscribe Newsletter</p>

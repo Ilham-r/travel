@@ -7,7 +7,7 @@ import SideBar from "./sections/SideBar";
 
 const SearchPage = () => {
   return (
-    <div className="w-full h-screen flex-col flex mt-10 mb-48 justify-start px-20">
+    <div className=" flex w-full flex-col  mt-10 mb-64 justify-start px-20">
       <Searchbar />
       <div className="grid grid-cols-[280px_1fr] py-7">
         {/* Sidebar - Filters */}
